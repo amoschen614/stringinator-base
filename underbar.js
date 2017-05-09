@@ -1,6 +1,6 @@
 // Returns the given value. Seems pointless perhaps but see its use below for providing a default, no-op callback.
 const identity = function(val) {
-  // Your code goes here
+  return val;
 };
 
 // Returns the first n elements of the given array.
