@@ -107,7 +107,13 @@ const some = function(obj, callback=identity) {
 
 // Return an array with all elements / object values that are accepted by the callback.
 const filter = function(obj, callback=identity) {
-  // Your code goes here
+  let result = [];
+  each(obj, el => {
+    if (callback(el)) {
+      result.push(el);
+    }
+  });
+  return result;
 };
 
 // Return object without the elements / object valuesthat were rejected by the callback.
