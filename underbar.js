@@ -89,7 +89,11 @@ const contains = function(obj, target) {
 
 // Return true if all the elements / object values are accepted by the callback.
 const every = function(obj, callback=identity) {
-  // Your code goes here
+  let areAllValid = true;
+  each(obj, el => {
+    areAllValid = callback(el) && areAllValid;
+  });
+  return areAllValid;
 };
 
 // Return true if even 1 element / object value is accepted by the callback.
