@@ -123,7 +123,13 @@ const reject = function(arr, callback=identity) {
 
 // De-duplicates (de-dups) the elements / object values.
 const uniq = function(obj) {
-  // Your code goes here
+  let result = [];
+  every(obj, el => {
+    if (!contains(result, el)) {
+      result.push(el)
+    }
+  });
+  return result;
 };
 
 
