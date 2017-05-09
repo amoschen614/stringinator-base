@@ -5,7 +5,7 @@ const identity = function(val) {
 
 // Returns the first n elements of the given array.
 const first = function(array, n = 1) {
-  // Your code goes here
+  return n === 1 ? array[0] : array.slice(0, Math.min(array.length, n));
 };
 
 // Returns the last n elements of the given array.
