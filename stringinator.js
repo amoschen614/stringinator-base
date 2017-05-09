@@ -13,8 +13,7 @@ const removeChar = function(str, target) {
 };
 
 const hasChar = function(str, target) {
-  // hint: use _.some
-  // Your code goes here
+  return _.some(str, ch => ch === target);
 };
 
 const isOnlyDigits = function(str) {
