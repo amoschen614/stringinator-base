@@ -15,12 +15,14 @@ const last = function(array, n = 1) {
 
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 const indexOf = function(array, target, fromIndex=0) {
-  for (let i = fromIndex; i < array.length; i++) {
-    if (array[i] === target) {
-      return i;
+  let result = -1;
+  each(array, el => {
+    if(el === target && result === -1) {
+      result = fromIndex;
     }
-  }
-  return -1;
+    fromIndex++;
+  });
+  return result;
 };
 
 const isArrayLike = function(obj) {
