@@ -80,7 +80,11 @@ const reduce = function(obj, callback=identity, initialValue) {
 
 // Return true if the object contains the target.
 const contains = function(obj, target) {
-  // Your code goes here
+  let isFound = false;
+  each(obj, el => {
+    isFound = (el === target) || isFound;
+  });
+  return isFound;
 };
 
 // Return true if all the elements / object values are accepted by the callback.
