@@ -17,7 +17,7 @@ const hasChar = function(str, target) {
 };
 
 const isOnlyDigits = function(str) {
-  // Your code goes here
+  return _.every(str, ch => !isNaN(parseInt(ch)));
 };
 
 const filterToOnlyDigits = function(str) {
